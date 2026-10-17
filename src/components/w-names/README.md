@@ -38,6 +38,8 @@ But the documentation of the `value` property is missing.
 
 - An entry in the 'property' category should be visible for the 'value' property, with the matching description
 
+---
+
 ### Attributes and properties name collision controls issue
 
 :x: Setting the control value of the `value` attribute actually sets the `value` property, when it should change the `defaultValue` property

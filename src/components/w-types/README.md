@@ -42,6 +42,8 @@ Manifest
 The control for enum properties should show a 'Set value' that transform to a select like input when clicked.
 This probably should also account for this PR https://github.com/wc-toolkit/storybook-helpers/pull/116, but I never encounter such a need.
 
+---
+
 ### Array property control invalid
 
 :x: On an array typed property, the "Set object" control does not allow to set a valid array. 
@@ -49,6 +51,8 @@ This probably should also account for this PR https://github.com/wc-toolkit/stor
 #### Expected behavior
 
 Control should allow to enter Array like values
+
+---
 
 ### Function property control
 
