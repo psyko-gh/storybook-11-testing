@@ -4,6 +4,207 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "src/components/w-defaults/w-defaults.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "This component goes through various types for properties defaults verification\r\n\r\n✔️ Everything looks good\r\n\r\n❌ except controls on array properties - control does not allow inputting an array",
+          "name": "WDefaults",
+          "members": [
+            {
+              "kind": "field",
+              "name": "objectNoAttribute",
+              "description": "✔️ An Object property",
+              "type": {
+                "text": "object"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "objectNoAttributeWithDefault",
+              "type": {
+                "text": "object"
+              },
+              "default": "{ foo: 'bar'}",
+              "description": "✔️ An Object property with default"
+            },
+            {
+              "kind": "field",
+              "name": "objectWithAttribute",
+              "description": "✔️ An Object property",
+              "type": {
+                "text": "object"
+              },
+              "attribute": "objectWithAttribute"
+            },
+            {
+              "kind": "field",
+              "name": "objectWithAttributeWithDefault",
+              "type": {
+                "text": "object"
+              },
+              "default": "{ foo: 'bar'}",
+              "description": "✔️ An Object property with default",
+              "attribute": "objectWithAttributeWithDefault"
+            },
+            {
+              "kind": "field",
+              "name": "arrayNoAttribute",
+              "description": "✔️ An Array property",
+              "type": {
+                "text": "string[]"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "arrayNoAttributeWithDefault",
+              "type": {
+                "text": "string[]"
+              },
+              "default": "['a', 'b', 'c']",
+              "description": "✔️ An Array property with default"
+            },
+            {
+              "kind": "field",
+              "name": "arrayWithAttribute",
+              "description": "✔️ An Array property",
+              "type": {
+                "text": "string[]"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "arrayWithAttributeWithDefault",
+              "type": {
+                "text": "string[]"
+              },
+              "default": "['a', 'b', 'c']",
+              "description": "✔️ An Array property with default"
+            },
+            {
+              "kind": "field",
+              "name": "function",
+              "description": "✔️ A function property",
+              "type": {
+                "text": "() => boolean"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "functionWithDefault",
+              "description": "✔️ A function property with default",
+              "type": {
+                "text": "() => boolean"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "functionWithAnotherDefault",
+              "description": "✔️ A function property with default",
+              "type": {
+                "text": "() => boolean"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "objectCustomType",
+              "description": "❓ A typed object property - Probably good",
+              "type": {
+                "text": "SomeObjectProp"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "objectCustomTypeWithDefault",
+              "type": {
+                "text": "SomeObjectProp"
+              },
+              "default": "{ foo: 'bar'}",
+              "description": "❓ A typed object property with default - Probably good"
+            },
+            {
+              "kind": "field",
+              "name": "functionCustomType",
+              "description": "✔️ A function property",
+              "type": {
+                "text": "Formatter"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "functionCustomTypeWithDefault",
+              "description": "✔️ A function property",
+              "type": {
+                "text": "Formatter"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "__printValue",
+              "parameters": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "expectedType"
+                },
+                {
+                  "name": "classOf",
+                  "default": "undefined"
+                }
+              ],
+              "description": "Should not be visible in description - and is not visible ! All good",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "objectWithAttribute",
+              "description": "✔️ An Object property",
+              "type": {
+                "text": "object"
+              },
+              "fieldName": "objectWithAttribute"
+            },
+            {
+              "name": "objectWithAttributeWithDefault",
+              "type": {
+                "text": "object"
+              },
+              "default": "{ foo: 'bar'}",
+              "description": "✔️ An Object property with default",
+              "fieldName": "objectWithAttributeWithDefault"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "w-defaults",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WDefaults",
+          "declaration": {
+            "name": "WDefaults",
+            "module": "src/components/w-defaults/w-defaults.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "w-defaults",
+          "declaration": {
+            "name": "WDefaults",
+            "module": "src/components/w-defaults/w-defaults.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/w-names/w-name.js",
       "declarations": [
         {
