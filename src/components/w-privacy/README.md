@@ -1,3 +1,5 @@
+# OUTDATED (see edit in repo README.md)
+
 ![Preview](preview.png)
 
 ## Objective
