@@ -1,0 +1,37 @@
+# Generated .gitignore file for: JavaScript, IntelliJ, Windows, npm, Vite
+# Created with FOSSA's DevOps Tools
+
+# JavaScript
+# Add JavaScript-specific ignores here
+
+# IntelliJ
+# Add IntelliJ-specific ignores here
+
+# Windows
+# Add Windows-specific ignores here
+
+# npm
+# Add npm-specific ignores here
+
+# Vite
+# Add Vite-specific ignores here
+
+# Common
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.tmp
+*.swp
+*~
+
+# IDE and editor generated files
+.idea/
+*.sublime-*
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+/dist/
+/node_modules/

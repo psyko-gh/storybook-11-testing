@@ -1,0 +1,577 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/w-names/w-name.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WName",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A simple string property with different prop and attr name",
+              "attribute": "public-name"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "description": "Description of the defaultValue property (`value` attribute)",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "description": "The property description shadows the attribute being tied to `defaultValue`"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "public-name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A simple string property with different prop and attr name",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "description": "Description of the defaultValue property (`value` attribute)",
+              "fieldName": "defaultValue"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "w-name",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WName",
+          "declaration": {
+            "name": "WName",
+            "module": "src/components/w-names/w-name.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "w-name",
+          "declaration": {
+            "name": "WName",
+            "module": "src/components/w-names/w-name.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/w-privacy/w-privacy.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WPrivacy",
+          "members": [
+            {
+              "kind": "field",
+              "name": "formAssociated",
+              "type": {
+                "text": "boolean"
+              },
+              "static": true,
+              "default": "true",
+              "description": "Should not appear in description",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "publicName",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A public property - Visible in description",
+              "attribute": "publicName"
+            },
+            {
+              "kind": "field",
+              "name": "_protectedName",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A protected property - should not appear in description ?",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "__privateName",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A private property - should not appear in description",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "publicName",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A public property - Visible in description",
+              "fieldName": "publicName"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "w-privacy",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WPrivacy",
+          "declaration": {
+            "name": "WPrivacy",
+            "module": "src/components/w-privacy/w-privacy.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "w-privacy",
+          "declaration": {
+            "name": "WPrivacy",
+            "module": "src/components/w-privacy/w-privacy.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/w-readonly/w-readonly.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WReadonly",
+          "members": [
+            {
+              "kind": "field",
+              "name": "formAssociated",
+              "type": {
+                "text": "boolean"
+              },
+              "static": true,
+              "default": "true",
+              "description": "Readonly - Should not have control in UI",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "publicName",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A standard property - Does have a control in UI",
+              "attribute": "publicName"
+            },
+            {
+              "kind": "field",
+              "name": "random",
+              "description": "A readonly property - Should not have control in UI",
+              "return": {
+                "type": {
+                  "text": "number"
+                }
+              },
+              "readonly": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "publicName",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A standard property - Does have a control in UI",
+              "fieldName": "publicName"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "w-readonly",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WReadonly",
+          "declaration": {
+            "name": "WReadonly",
+            "module": "src/components/w-readonly/w-readonly.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "w-readonly",
+          "declaration": {
+            "name": "WReadonly",
+            "module": "src/components/w-readonly/w-readonly.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/w-test-01/w-test-01.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WTest01",
+          "members": [
+            {
+              "kind": "field",
+              "name": "staticReadonly",
+              "type": {
+                "text": "boolean"
+              },
+              "static": true,
+              "default": "true",
+              "description": "`Set boolean` control should not be present here ?",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A simple string property",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "number",
+              "type": {
+                "text": "number"
+              },
+              "default": "12",
+              "description": "A simple number property",
+              "attribute": "number"
+            },
+            {
+              "kind": "field",
+              "name": "__privateField",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "An internal field. Flagged as private. Should not appear here ?",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "internalState",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "Flagged as private. Should not appear ??",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_protectedInternalState",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "Flagged as protected. Should not appear ??",
+              "privacy": "protected"
+            },
+            {
+              "kind": "field",
+              "name": "readonlyValue",
+              "description": "Returns some readonly value. Seems to be working fine as control is disabled.",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              },
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "description": "A simple enumeration property. Control object seems invalid ?",
+              "type": {
+                "text": "'blue' | 'red' | 'green'"
+              },
+              "attribute": "color"
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "description": "Description of the defaultValue property (value attribute)",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "description": "The property description shadows the attribute being tied to `defaultValue`"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A simple string property",
+              "fieldName": "name"
+            },
+            {
+              "name": "number",
+              "type": {
+                "text": "number"
+              },
+              "default": "12",
+              "description": "A simple number property",
+              "fieldName": "number"
+            },
+            {
+              "name": "color",
+              "description": "A simple enumeration property. Control object seems invalid ?",
+              "type": {
+                "text": "'blue' | 'red' | 'green'"
+              },
+              "fieldName": "color"
+            },
+            {
+              "name": "value",
+              "description": "Description of the defaultValue property (value attribute)",
+              "fieldName": "defaultValue"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "w-test-01",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WTest01",
+          "declaration": {
+            "name": "WTest01",
+            "module": "src/components/w-test-01/w-test-01.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "w-test-01",
+          "declaration": {
+            "name": "WTest01",
+            "module": "src/components/w-test-01/w-test-01.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/w-types/w-types.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WTypes",
+          "members": [
+            {
+              "kind": "field",
+              "name": "stringProp",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A string property",
+              "attribute": "stringProp"
+            },
+            {
+              "kind": "field",
+              "name": "numberProp",
+              "type": {
+                "text": "number"
+              },
+              "default": "12",
+              "description": "A number property",
+              "attribute": "numberProp"
+            },
+            {
+              "kind": "field",
+              "name": "arrayProp",
+              "type": {
+                "text": "string[]"
+              },
+              "default": "[]",
+              "description": "An array property",
+              "attribute": "arrayProp"
+            },
+            {
+              "kind": "field",
+              "name": "objectProp",
+              "type": {
+                "text": "object"
+              },
+              "default": "{}",
+              "description": "An object property",
+              "attribute": "objectProp"
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "'blue' | 'red' | 'green'"
+              },
+              "default": "'red'",
+              "description": "An enumeration property. Control object seems invalid ?",
+              "attribute": "color"
+            },
+            {
+              "kind": "field",
+              "name": "functionProp",
+              "description": "A function property. Control object should probably not show",
+              "type": {
+                "text": "() => boolean"
+              },
+              "attribute": "functionProp"
+            },
+            {
+              "kind": "method",
+              "name": "__printValue",
+              "parameters": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "expectedType"
+                }
+              ],
+              "description": "Should not be visible in description - and is not visible ! All good",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "stringProp",
+              "type": {
+                "text": "string"
+              },
+              "default": "'World'",
+              "description": "A string property",
+              "fieldName": "stringProp"
+            },
+            {
+              "name": "numberProp",
+              "type": {
+                "text": "number"
+              },
+              "default": "12",
+              "description": "A number property",
+              "fieldName": "numberProp"
+            },
+            {
+              "name": "arrayProp",
+              "type": {
+                "text": "string[]"
+              },
+              "default": "[]",
+              "description": "An array property",
+              "fieldName": "arrayProp"
+            },
+            {
+              "name": "objectProp",
+              "type": {
+                "text": "object"
+              },
+              "default": "{}",
+              "description": "An object property",
+              "fieldName": "objectProp"
+            },
+            {
+              "name": "color",
+              "type": {
+                "text": "'blue' | 'red' | 'green'"
+              },
+              "default": "'red'",
+              "description": "An enumeration property. Control object seems invalid ?",
+              "fieldName": "color"
+            },
+            {
+              "name": "functionProp",
+              "description": "A function property. Control object should probably not show",
+              "type": {
+                "text": "() => boolean"
+              },
+              "fieldName": "functionProp"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "w-types",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WTypes",
+          "declaration": {
+            "name": "WTypes",
+            "module": "src/components/w-types/w-types.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "w-types",
+          "declaration": {
+            "name": "WTypes",
+            "module": "src/components/w-types/w-types.js"
+          }
+        }
+      ]
+    }
+  ]
+}
