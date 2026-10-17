@@ -8,7 +8,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "This component has:\r\n- one `name` property bound to its matching `name` attribute\r\n- one `defaultValue` property bound to the `value` attribute\r\n- one `value` property with no attribute\r\n\r\n✔️ A simple string property with different prop and attr name\r\n\r\n❌ Attribute and property `value` collides, leading to inaccurate\r\ndescription, and controls changing the wrong property",
           "name": "WName",
           "members": [
             {
@@ -82,7 +82,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "This component has :\r\n- 1 public property with matching attribute\r\n- 1 protected field\r\n- 1 private field\r\n- 1 private static field\r\n\r\n✔️ Only the public property is visible\r\n\r\n✔️ Protected and private are not visible\r\n\r\n✔️ Statics are not visible",
           "name": "WPrivacy",
           "members": [
             {
@@ -93,9 +93,7 @@
               },
               "static": true,
               "default": "true",
-              "description": "❌ Should not appear in description",
-              "privacy": "private",
-              "readonly": true
+              "description": "✔️ Static - does not appear in generated documentation"
             },
             {
               "kind": "field",
@@ -103,8 +101,8 @@
               "type": {
                 "text": "string"
               },
-              "default": "'World'",
-              "description": "✔️ A public property - Visible in description",
+              "default": "'Public name value'",
+              "description": "✔️ A public property - Visible in generated documentation",
               "attribute": "publicName"
             },
             {
@@ -114,7 +112,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "❌ A protected property - should not appear in description ?",
+              "description": "✔️ A protected property - does not appear in generated documentation",
               "privacy": "protected"
             },
             {
@@ -124,7 +122,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "❌ A private property - should not appear in description",
+              "description": "✔️ A private property - should not appear in generated documentation",
               "privacy": "private"
             }
           ],
@@ -134,8 +132,8 @@
               "type": {
                 "text": "string"
               },
-              "default": "'World'",
-              "description": "✔️ A public property - Visible in description",
+              "default": "'Public name value'",
+              "description": "✔️ A public property - Visible in generated documentation",
               "fieldName": "publicName"
             }
           ],
@@ -172,20 +170,9 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "This component has :\r\n- 1 public property with matching attribute\r\n- 1 readonly property\r\n\r\n✔️ Both properties are visible in the generated documentation\r\n\r\n✔️ Only the editable property has control",
           "name": "WReadonly",
           "members": [
-            {
-              "kind": "field",
-              "name": "formAssociated",
-              "type": {
-                "text": "boolean"
-              },
-              "static": true,
-              "default": "true",
-              "description": "❌ Readonly - Should not have control in UI",
-              "readonly": true
-            },
             {
               "kind": "field",
               "name": "publicName",
@@ -252,7 +239,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "This component goes through various types for properties\r\n\r\n✔️ A string property - control is OK\r\n\r\n✔️ A number property - control is OK\r\n\r\n❌ An array property - control does not allow inputting an array\r\n\r\n✔️ A enumeration property - control is OK\r\n\r\n✔️ A enumeration property with a lot of values - control is OK\r\n\r\n✔️ An object property - control is not available (as expected)",
           "name": "WTypes",
           "members": [
             {
@@ -287,6 +274,26 @@
             },
             {
               "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "'blue' | 'red' | 'green'"
+              },
+              "default": "'red'",
+              "description": "✔️ An enumeration property.",
+              "attribute": "color"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '1000' | '1100' | '1200' | '1300' | '1400'"
+              },
+              "default": "'500'",
+              "description": "✔️ An enumeration property with more values.",
+              "attribute": "variant"
+            },
+            {
+              "kind": "field",
               "name": "objectProp",
               "type": {
                 "text": "object"
@@ -297,18 +304,8 @@
             },
             {
               "kind": "field",
-              "name": "color",
-              "type": {
-                "text": "'blue' | 'red' | 'green'"
-              },
-              "default": "'red'",
-              "description": "❌ An enumeration property. Control object seems invalid ?",
-              "attribute": "color"
-            },
-            {
-              "kind": "field",
               "name": "functionProp",
-              "description": "❌ A function property. Control object should probably not show",
+              "description": "✔️ A function property.",
               "type": {
                 "text": "() => boolean"
               },
@@ -358,6 +355,24 @@
               "fieldName": "arrayProp"
             },
             {
+              "name": "color",
+              "type": {
+                "text": "'blue' | 'red' | 'green'"
+              },
+              "default": "'red'",
+              "description": "✔️ An enumeration property.",
+              "fieldName": "color"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "'100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '1000' | '1100' | '1200' | '1300' | '1400'"
+              },
+              "default": "'500'",
+              "description": "✔️ An enumeration property with more values.",
+              "fieldName": "variant"
+            },
+            {
               "name": "objectProp",
               "type": {
                 "text": "object"
@@ -367,17 +382,8 @@
               "fieldName": "objectProp"
             },
             {
-              "name": "color",
-              "type": {
-                "text": "'blue' | 'red' | 'green'"
-              },
-              "default": "'red'",
-              "description": "❌ An enumeration property. Control object seems invalid ?",
-              "fieldName": "color"
-            },
-            {
               "name": "functionProp",
-              "description": "❌ A function property. Control object should probably not show",
+              "description": "✔️ A function property.",
               "type": {
                 "text": "() => boolean"
               },

@@ -2,6 +2,21 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import {when} from 'lit/directives/when.js';
 
+/**
+ * This component goes through various types for properties
+ *
+ * ✔️ A string property - control is OK
+ *
+ * ✔️ A number property - control is OK
+ *
+ * ❌ An array property - control does not allow inputting an array
+ *
+ * ✔️ A enumeration property - control is OK
+ *
+ * ✔️ A enumeration property with a lot of values - control is OK
+ *
+ * ✔️ An object property - control is not available (as expected)
+ */
 @customElement('w-types')
 export class WTypes extends LitElement {
   /**
@@ -26,6 +41,20 @@ export class WTypes extends LitElement {
   accessor arrayProp = [];
 
   /**
+   * ✔️ An enumeration property.
+   * @type {'blue' | 'red' | 'green'}
+   */
+  @property({ type: String })
+  accessor color = 'red';
+
+  /**
+   * ✔️ An enumeration property with more values.
+   * @type {'100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '1000' | '1100' | '1200' | '1300' | '1400'}
+   */
+  @property({ type: String })
+  accessor variant = '500';
+
+  /**
    * ✔️ An object property
    * @type {object}
    */
@@ -33,14 +62,7 @@ export class WTypes extends LitElement {
   accessor objectProp = {};
 
   /**
-   * ❌ An enumeration property. Control object seems invalid ?
-   * @type {'blue' | 'red' | 'green'}
-   */
-  @property({ type: String })
-  accessor color = 'red';
-
-  /**
-   * ❌ A function property. Control object should probably not show
+   * ✔️ A function property.
    * @type {() => boolean}
    */
   @property({ type: String })
@@ -60,8 +82,8 @@ export class WTypes extends LitElement {
           <tbody>
             ${this.__printValue('stringProp', 'string')}
             ${this.__printValue('numberProp', 'number')}
-            ${this.__printValue('color', 'string')}
             ${this.__printValue('arrayProp')}
+            ${this.__printValue('color', 'string')}            
             ${this.__printValue('objectProp', 'object')}
             ${this.__printValue('functionProp', 'function')}
           </tbody>

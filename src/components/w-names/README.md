@@ -1,5 +1,3 @@
-# OUTDATED (see edit in repo README.md)
-
 ![Preview](preview.png)
 
 ## Objective
@@ -44,9 +42,9 @@ But the documentation of the `value` property is missing.
 
 ### Attributes and properties name collision controls issue
 
-:x: Setting the control value of the `value` attribute actually sets the `value` property, when it should change the `defaultValue` property
+:x: Setting the control value of the `value` **attribute** actually sets the `value` **property**, when it should change the `defaultValue` **property**.
 
 #### Expected behavior
 
-- Setting the 'value' attribute should actually use the 'value' attribute (or the 'defaultValue' property)
+- Setting the 'value' attribute using control should actually use the 'value' attribute (or the 'defaultValue' property)
 - A control for the 'value' property should be visible

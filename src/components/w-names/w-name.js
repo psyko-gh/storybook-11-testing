@@ -1,6 +1,17 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
+/**
+ * This component has:
+ * - one `name` property bound to its matching `name` attribute
+ * - one `defaultValue` property bound to the `value` attribute
+ * - one `value` property with no attribute
+ *
+ * ✔️ A simple string property with different prop and attr name
+ *
+ * ❌ Attribute and property `value` collides, leading to inaccurate
+ * description, and controls changing the wrong property
+ */
 @customElement('w-name')
 export class WName extends LitElement {
   /**
