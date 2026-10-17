@@ -16,8 +16,9 @@ Testing properties and attributes names handling _(both simple, and edge cases)_
 In this example, we definitely have:
 - one entry in the Properties category for defaultValue,
 - one entry in the Attributes category for value.
-
-But the description of the `value` property is the description of the attribute - it should be the description of the `value` property
+- Documentation of the 'defaultValue' property and 'value' attribute are the same (which is what we want)
+ 
+But the documentation of the `value` property is missing.
 
 ```js 
   /**
@@ -33,7 +34,15 @@ But the description of the `value` property is the description of the attribute 
   accessor value;
 ```
 
+#### Expected behavior
+
+- An entry in the 'property' category should be visible for the 'value' property, with the matching description
+
 ### Attributes and properties name collision controls issue
 
 :x: Setting the control value of the `value` attribute actually sets the `value` property, when it should change the `defaultValue` property
 
+#### Expected behavior
+
+- Setting the 'value' attribute should actually use the 'value' attribute (or the 'defaultValue' property)
+- A control for the 'value' property should be visible

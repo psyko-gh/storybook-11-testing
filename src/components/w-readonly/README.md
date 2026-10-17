@@ -27,3 +27,7 @@ Static readonly files have a "Set object" control in the UI
   "readonly": true
 }
 ```
+
+#### Expected behavior
+
+Static readonly fields should not be visible

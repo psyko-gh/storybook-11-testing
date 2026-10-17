@@ -27,6 +27,10 @@ Private field are visible in the generated documentation, even when correctly fl
 }
 ```
 
+#### Expected behavior
+
+Protected fields should not be visible
+
 ### Private fields
 
 :x: Private field are visible in the generated documentation, even when correctly flagged in manifest.
@@ -42,3 +46,7 @@ Private field are visible in the generated documentation, even when correctly fl
   "privacy": "private"
 }
 ```
+
+#### Expected behavior
+
+Private fields should not be visible
