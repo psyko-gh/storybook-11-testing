@@ -10,7 +10,7 @@ Some tests about the integration of features from `wc-toolkit/storybook-helpers`
 - [Privacy](src/components/w-names/README.md) : tests about privacy handling - ✔️ All good
 - [Readonly](src/components/w-names/README.md) : tests about readonly handling - ✔️ All good
 - [Types](src/components/w-names/README.md) : tests about types detections and matching controls - ❌ some issues
-
+- [Default](src/components/w-defaults/README.md) : tests about props default values - ✔️ All good 
 
 ## First issue 
 
