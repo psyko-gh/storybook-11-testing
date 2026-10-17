@@ -18,19 +18,19 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A simple string property with different prop and attr name",
+              "description": "✔️ A simple string property with different prop and attr name",
               "attribute": "public-name"
             },
             {
               "kind": "field",
               "name": "defaultValue",
-              "description": "Description of the defaultValue property (`value` attribute)",
+              "description": "❌ and ✔️ Description of the defaultValue property (`value` attribute)",
               "attribute": "value"
             },
             {
               "kind": "field",
               "name": "value",
-              "description": "The property description shadows the attribute being tied to `defaultValue`"
+              "description": "❌ The property description shadows the attribute being tied to `defaultValue`"
             }
           ],
           "attributes": [
@@ -40,12 +40,12 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A simple string property with different prop and attr name",
+              "description": "✔️ A simple string property with different prop and attr name",
               "fieldName": "name"
             },
             {
               "name": "value",
-              "description": "Description of the defaultValue property (`value` attribute)",
+              "description": "❌ and ✔️ Description of the defaultValue property (`value` attribute)",
               "fieldName": "defaultValue"
             }
           ],
@@ -93,7 +93,7 @@
               },
               "static": true,
               "default": "true",
-              "description": "Should not appear in description",
+              "description": "❌ Should not appear in description",
               "privacy": "private",
               "readonly": true
             },
@@ -104,7 +104,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A public property - Visible in description",
+              "description": "✔️ A public property - Visible in description",
               "attribute": "publicName"
             },
             {
@@ -114,7 +114,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A protected property - should not appear in description ?",
+              "description": "❌ A protected property - should not appear in description ?",
               "privacy": "protected"
             },
             {
@@ -124,7 +124,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A private property - should not appear in description",
+              "description": "❌ A private property - should not appear in description",
               "privacy": "private"
             }
           ],
@@ -135,7 +135,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A public property - Visible in description",
+              "description": "✔️ A public property - Visible in description",
               "fieldName": "publicName"
             }
           ],
@@ -183,7 +183,7 @@
               },
               "static": true,
               "default": "true",
-              "description": "Readonly - Should not have control in UI",
+              "description": "❌ Readonly - Should not have control in UI",
               "readonly": true
             },
             {
@@ -193,13 +193,13 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A standard property - Does have a control in UI",
+              "description": "✔️ A standard property - Does have a control in UI",
               "attribute": "publicName"
             },
             {
               "kind": "field",
               "name": "random",
-              "description": "A readonly property - Should not have control in UI",
+              "description": "✔️ A readonly property - Does not have control in UI",
               "return": {
                 "type": {
                   "text": "number"
@@ -215,7 +215,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A standard property - Does have a control in UI",
+              "description": "✔️ A standard property - Does have a control in UI",
               "fieldName": "publicName"
             }
           ],
@@ -248,168 +248,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/w-test-01/w-test-01.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "WTest01",
-          "members": [
-            {
-              "kind": "field",
-              "name": "staticReadonly",
-              "type": {
-                "text": "boolean"
-              },
-              "static": true,
-              "default": "true",
-              "description": "`Set boolean` control should not be present here ?",
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'World'",
-              "description": "A simple string property",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "number",
-              "type": {
-                "text": "number"
-              },
-              "default": "12",
-              "description": "A simple number property",
-              "attribute": "number"
-            },
-            {
-              "kind": "field",
-              "name": "__privateField",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "An internal field. Flagged as private. Should not appear here ?",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "internalState",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "Flagged as private. Should not appear ??",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "_protectedInternalState",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "Flagged as protected. Should not appear ??",
-              "privacy": "protected"
-            },
-            {
-              "kind": "field",
-              "name": "readonlyValue",
-              "description": "Returns some readonly value. Seems to be working fine as control is disabled.",
-              "return": {
-                "type": {
-                  "text": "string"
-                }
-              },
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "color",
-              "description": "A simple enumeration property. Control object seems invalid ?",
-              "type": {
-                "text": "'blue' | 'red' | 'green'"
-              },
-              "attribute": "color"
-            },
-            {
-              "kind": "field",
-              "name": "defaultValue",
-              "description": "Description of the defaultValue property (value attribute)",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "description": "The property description shadows the attribute being tied to `defaultValue`"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'World'",
-              "description": "A simple string property",
-              "fieldName": "name"
-            },
-            {
-              "name": "number",
-              "type": {
-                "text": "number"
-              },
-              "default": "12",
-              "description": "A simple number property",
-              "fieldName": "number"
-            },
-            {
-              "name": "color",
-              "description": "A simple enumeration property. Control object seems invalid ?",
-              "type": {
-                "text": "'blue' | 'red' | 'green'"
-              },
-              "fieldName": "color"
-            },
-            {
-              "name": "value",
-              "description": "Description of the defaultValue property (value attribute)",
-              "fieldName": "defaultValue"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "w-test-01",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "WTest01",
-          "declaration": {
-            "name": "WTest01",
-            "module": "src/components/w-test-01/w-test-01.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "w-test-01",
-          "declaration": {
-            "name": "WTest01",
-            "module": "src/components/w-test-01/w-test-01.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/w-types/w-types.js",
       "declarations": [
         {
@@ -424,7 +262,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A string property",
+              "description": "✔️ A string property",
               "attribute": "stringProp"
             },
             {
@@ -434,7 +272,7 @@
                 "text": "number"
               },
               "default": "12",
-              "description": "A number property",
+              "description": "✔️ A number property",
               "attribute": "numberProp"
             },
             {
@@ -444,7 +282,7 @@
                 "text": "string[]"
               },
               "default": "[]",
-              "description": "An array property",
+              "description": "❌ An array property",
               "attribute": "arrayProp"
             },
             {
@@ -454,7 +292,7 @@
                 "text": "object"
               },
               "default": "{}",
-              "description": "An object property",
+              "description": "✔️ An object property",
               "attribute": "objectProp"
             },
             {
@@ -464,13 +302,13 @@
                 "text": "'blue' | 'red' | 'green'"
               },
               "default": "'red'",
-              "description": "An enumeration property. Control object seems invalid ?",
+              "description": "❌ An enumeration property. Control object seems invalid ?",
               "attribute": "color"
             },
             {
               "kind": "field",
               "name": "functionProp",
-              "description": "A function property. Control object should probably not show",
+              "description": "❌ A function property. Control object should probably not show",
               "type": {
                 "text": "() => boolean"
               },
@@ -498,7 +336,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "description": "A string property",
+              "description": "✔️ A string property",
               "fieldName": "stringProp"
             },
             {
@@ -507,7 +345,7 @@
                 "text": "number"
               },
               "default": "12",
-              "description": "A number property",
+              "description": "✔️ A number property",
               "fieldName": "numberProp"
             },
             {
@@ -516,7 +354,7 @@
                 "text": "string[]"
               },
               "default": "[]",
-              "description": "An array property",
+              "description": "❌ An array property",
               "fieldName": "arrayProp"
             },
             {
@@ -525,7 +363,7 @@
                 "text": "object"
               },
               "default": "{}",
-              "description": "An object property",
+              "description": "✔️ An object property",
               "fieldName": "objectProp"
             },
             {
@@ -534,12 +372,12 @@
                 "text": "'blue' | 'red' | 'green'"
               },
               "default": "'red'",
-              "description": "An enumeration property. Control object seems invalid ?",
+              "description": "❌ An enumeration property. Control object seems invalid ?",
               "fieldName": "color"
             },
             {
               "name": "functionProp",
-              "description": "A function property. Control object should probably not show",
+              "description": "❌ A function property. Control object should probably not show",
               "type": {
                 "text": "() => boolean"
               },

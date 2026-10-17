@@ -5,42 +5,42 @@ import {when} from 'lit/directives/when.js';
 @customElement('w-types')
 export class WTypes extends LitElement {
   /**
-   * A string property
+   * ✔️ A string property
    * @type {string}
    */
   @property({ type: String})
   accessor stringProp = 'World';
 
   /**
-   * A number property
+   * ✔️ A number property
    * @type {number}
    */
   @property({ type: Number})
   accessor numberProp = 12;
 
   /**
-   * An array property
+   * ❌ An array property
    * @type {string[]}
    */
   @property({ type: Array})
   accessor arrayProp = [];
 
   /**
-   * An object property
+   * ✔️ An object property
    * @type {object}
    */
   @property({ type: Array})
   accessor objectProp = {};
 
   /**
-   * An enumeration property. Control object seems invalid ?
+   * ❌ An enumeration property. Control object seems invalid ?
    * @type {'blue' | 'red' | 'green'}
    */
   @property({ type: String })
   accessor color = 'red';
 
   /**
-   * A function property. Control object should probably not show
+   * ❌ A function property. Control object should probably not show
    * @type {() => boolean}
    */
   @property({ type: String })

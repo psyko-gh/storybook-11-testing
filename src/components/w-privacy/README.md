@@ -1,6 +1,12 @@
+![Preview](preview.png)
+
+## Objective
+
+Testing respect of 'privacy' field in the CEM.
+
 ## Working as expected
 
-- ::white_check_mark: Public prop/attr shows up in the generated description
+- :white_check_mark: Public prop/attr shows up in the generated description
 
 
 ## Issues
@@ -21,7 +27,7 @@ Private field are visible in the generated documentation, even when correctly fl
 }
 ```
 
-## Private fields
+### Private fields
 
 :x: Private field are visible in the generated documentation, even when correctly flagged in manifest.
 ```json

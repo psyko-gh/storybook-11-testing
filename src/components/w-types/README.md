@@ -1,12 +1,16 @@
+![Preview](preview.png)
+
 ## Working as expected
 
-- ::white_check_mark: Prop with different attribute shows correctly, with one entry in props and one entry in attributes
+- :white_check_mark: String property works fine
+- :white_check_mark: Number property works fine
+- :white_check_mark: Object property works fine
 
 ## Issues
 
 ## Enum property control invalid
 
-Enum like properties (described as below) show "Set object" control.
+:x: Enum like properties (described as below) show "Set object" control.
 
 I was not able to select/set a text value matching one of the allowed value. A select would be nice.
 
@@ -35,8 +39,8 @@ Manifest
 
 ## Array property control invalid
 
-On an array typed property, the "Set object" control does not allow to set a valid array. 
+:x: On an array typed property, the "Set object" control does not allow to set a valid array. 
 
 ## Function property control
 
-Function property shows a "Set object" control in the UI. As it's seems difficult to provide a control for specifying a function, I suggest to simply remove the control. 
+:x: Function property shows a "Set object" control in the UI. As it's seems difficult to provide a control for specifying a function, I suggest to simply remove the control. 
