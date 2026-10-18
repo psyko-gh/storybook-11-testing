@@ -16,6 +16,8 @@ import {when} from 'lit/directives/when.js';
  * ✔️ A enumeration property with a lot of values - control is OK
  *
  * ✔️ An object property - control is not available (as expected)
+ *
+ * ✔️ A date property - control is OK
  */
 @customElement('w-types')
 export class WTypes extends LitElement {
@@ -68,6 +70,13 @@ export class WTypes extends LitElement {
   @property({ type: String })
   accessor functionProp = () => true;
 
+  /**
+   * ✔️ An Date property.
+   * @type {Date}
+   */
+  @property({ type: Date })
+  accessor dateProp = new Date();
+
   render() {
     return html`
       <p>Testing types</p>
@@ -86,6 +95,7 @@ export class WTypes extends LitElement {
             ${this.__printValue('color', 'string')}            
             ${this.__printValue('objectProp', 'object')}
             ${this.__printValue('functionProp', 'function')}
+            ${this.__printValue('dateProp', 'object')}
           </tbody>
       </table>
     `;

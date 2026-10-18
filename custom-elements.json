@@ -70,7 +70,8 @@
               "description": "✔️ An Array property",
               "type": {
                 "text": "string[]"
-              }
+              },
+              "attribute": "arrayWithAttribute"
             },
             {
               "kind": "field",
@@ -79,7 +80,8 @@
                 "text": "string[]"
               },
               "default": "['a', 'b', 'c']",
-              "description": "✔️ An Array property with default"
+              "description": "✔️ An Array property with default",
+              "attribute": "arrayWithAttributeWithDefault"
             },
             {
               "kind": "field",
@@ -139,6 +141,23 @@
               }
             },
             {
+              "kind": "field",
+              "name": "dateNoAttribute",
+              "description": "✔️ A Date property",
+              "type": {
+                "text": "Date"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "dateNoAttributeWithDefault",
+              "default": "new Date()",
+              "description": "✔️ A Date property with default",
+              "type": {
+                "text": "Date"
+              }
+            },
+            {
               "kind": "method",
               "name": "__printValue",
               "parameters": [
@@ -174,6 +193,23 @@
               "default": "{ foo: 'bar'}",
               "description": "✔️ An Object property with default",
               "fieldName": "objectWithAttributeWithDefault"
+            },
+            {
+              "name": "arrayWithAttribute",
+              "description": "✔️ An Array property",
+              "type": {
+                "text": "string[]"
+              },
+              "fieldName": "arrayWithAttribute"
+            },
+            {
+              "name": "arrayWithAttributeWithDefault",
+              "type": {
+                "text": "string[]"
+              },
+              "default": "['a', 'b', 'c']",
+              "description": "✔️ An Array property with default",
+              "fieldName": "arrayWithAttributeWithDefault"
             }
           ],
           "superclass": {
@@ -440,7 +476,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "This component goes through various types for properties\r\n\r\n✔️ A string property - control is OK\r\n\r\n✔️ A number property - control is OK\r\n\r\n❌ An array property - control does not allow inputting an array\r\n\r\n✔️ A enumeration property - control is OK\r\n\r\n✔️ A enumeration property with a lot of values - control is OK\r\n\r\n✔️ An object property - control is not available (as expected)",
+          "description": "This component goes through various types for properties\r\n\r\n✔️ A string property - control is OK\r\n\r\n✔️ A number property - control is OK\r\n\r\n❌ An array property - control does not allow inputting an array\r\n\r\n✔️ A enumeration property - control is OK\r\n\r\n✔️ A enumeration property with a lot of values - control is OK\r\n\r\n✔️ An object property - control is not available (as expected)\r\n\r\n✔️ A date property - control is OK",
           "name": "WTypes",
           "members": [
             {
@@ -511,6 +547,16 @@
                 "text": "() => boolean"
               },
               "attribute": "functionProp"
+            },
+            {
+              "kind": "field",
+              "name": "dateProp",
+              "default": "new Date()",
+              "description": "✔️ An Date property.",
+              "type": {
+                "text": "Date"
+              },
+              "attribute": "dateProp"
             },
             {
               "kind": "method",
@@ -589,6 +635,15 @@
                 "text": "() => boolean"
               },
               "fieldName": "functionProp"
+            },
+            {
+              "name": "dateProp",
+              "default": "new Date()",
+              "description": "✔️ An Date property.",
+              "type": {
+                "text": "Date"
+              },
+              "fieldName": "dateProp"
             }
           ],
           "superclass": {

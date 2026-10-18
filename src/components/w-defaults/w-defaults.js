@@ -61,14 +61,14 @@ export class WDefaults extends LitElement {
    * ✔️ An Array property
    * @type {string[]}
    */
-  @property({ attribute: false })
+  @property({ type: Array })
   accessor arrayWithAttribute;
 
   /**
    * ✔️ An Array property with default
    * @type {string[]}
    */
-  @property({ attribute: false })
+  @property({ type: Array })
   accessor arrayWithAttributeWithDefault = ['a', 'b', 'c'];
 
   /* Function */
@@ -122,6 +122,22 @@ export class WDefaults extends LitElement {
   @property({attribute: false })
   accessor functionCustomTypeWithDefault = (v) => `-> ${v} <-`;
 
+  /* Dates */
+  /**
+   * ✔️ A Date property
+   * @type {Date}
+   */
+  @property({ attribute: false })
+  accessor dateNoAttribute;
+
+  /**
+   * ✔️ A Date property with default
+   * @type {Date}
+   */
+  @property({ attribute: false })
+  accessor dateNoAttributeWithDefault = new Date();
+
+
   render() {
     return html`
       <p>Testing types</p>
@@ -148,6 +164,8 @@ export class WDefaults extends LitElement {
             ${this.__printValue('objectCustomTypeWithDefault', 'object')}
             ${this.__printValue('functionCustomType', 'undefined')}
             ${this.__printValue('functionCustomTypeWithDefault', 'function')}
+            ${this.__printValue('dateNoAttribute', 'undefined')}
+            ${this.__printValue('dateNoAttributeWithDefault', null, 'Date')}
           </tbody>
       </table>
     `;

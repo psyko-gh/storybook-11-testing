@@ -43,4 +43,5 @@ This is now fixed, and tests have been adjusted.
 - Native integration fo the CEM feels good.
 - It reduces the redundant boilerplate code required to write stories _(`wc-toolkit/storybook-helpers` already did a great job, but native integration pushes it further)_
 - Not having a default bound value is a good idea. Having to explicitly hit the "Set string/object" button actually makes it easier to test components default behavior.
+- I'm looking forward to having code live update _(previous render of the generated DOM was not ideal either because it was lacking non attribute properties - ie `.prop` or `@event` in Lit)_
 - One thing that would be good, is a button to clear the assigned value in a control, and go back to the unbound value state.
