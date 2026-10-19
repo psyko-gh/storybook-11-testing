@@ -472,6 +472,85 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/w-slots/w-slots.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "This component tests slots, CSS properties and states",
+          "name": "WSlots",
+          "cssProperties": [
+            {
+              "description": "✔️ some CSS property",
+              "name": "--my-prop-1",
+              "default": "red"
+            }
+          ],
+          "slots": [
+            {
+              "description": "✔️ the default slot",
+              "name": ""
+            },
+            {
+              "description": "✔️ another slot",
+              "name": "second"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "second",
+              "description": "✔️ Doesn't collide with slot",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "second"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "second",
+              "description": "✔️ Doesn't collide with slot",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "second"
+            }
+          ],
+          "cssStates": [
+            {
+              "description": "❌ State should probably not have a control ?",
+              "name": "enabled"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "w-slots",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WSlots",
+          "declaration": {
+            "name": "WSlots",
+            "module": "src/components/w-slots/w-slots.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "w-slots",
+          "declaration": {
+            "name": "WSlots",
+            "module": "src/components/w-slots/w-slots.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/w-types/w-types.js",
       "declarations": [
         {
